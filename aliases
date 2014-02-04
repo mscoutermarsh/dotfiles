@@ -13,8 +13,12 @@ alias -g ONE="| awk '{ print \$1}'"
 alias e="$EDITOR"
 alias v="$VISUAL"
 
+# fix for passing params to rake tasks
+alias rake='noglob rake'
+
 # git
 alias gci="git pull --rebase && rake && git push"
+alias gs='git status -sb'
 
 # Bundler
 alias b="bundle"

@@ -1,3 +1,4 @@
+alias tmux="TERM=screen-256color-bce tmux"
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
 

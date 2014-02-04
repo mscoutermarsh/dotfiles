@@ -1,17 +1,51 @@
+:au FocusLost * :wa "Save on focus lost
+set tags=./tags;./../tags;
 " Leader
 let mapleader = " "
+" Toggle nerdtree with F2
+map <F10> :NERDTreeToggle<CR>
+
+" Reduce timeout after <ESC> is recvd. This is only a good idea on fast links.
+set ttimeout
+set ttimeoutlen=20
+set notimeout
+
+" Edit another file in the same directory as the current file
+" uses expression to extract path from current file's path
+map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
+map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
+map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
+
+" Default yank and paste go to Mac's clipboard
+if version >= 730 && has("macunix")
+  set clipboard=unnamed
+endif
+
+"key to insert mode with paste using F2 key
+map <F2> :set paste<CR>i
+" Leave paste mode on exit
+au InsertLeave * set nopaste
+
+" Command aliases
+cabbrev tp tabprev
+cabbrev tn tabnext
+cabbrev tf tabfirst
+cabbrev tl tablast
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nocompatible  " Use Vim settings, rather then Vi settings
 set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
-set history=50
+set history=500
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
+
+" Fuzzy finder: ignore stuff that can't be opened, and generated files
+let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -38,10 +72,6 @@ augroup vimrcEx
     \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal g`\"" |
     \ endif
-
-  " Cucumber navigation commands
-  autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
-  autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
 
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
@@ -74,17 +104,35 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" Airline
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline_theme='powerlineish'
+set t_Co=256
+
+
 " Color scheme
-colorscheme github
+colorscheme monokai
+set background=dark
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
+set encoding=utf-8
 
+" Highlight line number of where cursor currently is
+hi CursorLineNr guifg=#050505
 " Numbers
 set number
 set numberwidth=5
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
+
+" Persistent undo
+set undofile
+set undodir=~/.vim/undo
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -116,11 +164,6 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" vim-rspec mappings
-nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>s :call RunNearestSpec()<CR>
-nnoremap <Leader>l :call RunLastSpec()<CR>
-
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
@@ -141,3 +184,14 @@ let g:syntastic_check_on_open=1
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+" Remove trailing whitespace on save for ruby files.
+au BufWritePre *.rb :%s/\s\+$//e
+
+" cmd n, cmd p for fwd/backward in search
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
+
+set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
