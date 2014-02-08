@@ -10,6 +10,7 @@ Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'rking/ag.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'sjl/vitality.vim'
 Bundle 'tpope/vim-fugitive'
@@ -34,7 +35,6 @@ Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'terryma/vim-smooth-scroll'
 Bundle 'scrooloose/nerdtree'
-Bundle 'mileszs/ack.vim'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"

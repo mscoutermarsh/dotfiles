@@ -16,11 +16,6 @@ map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
-" Default yank and paste go to Mac's clipboard
-if version >= 730 && has("macunix")
-  set clipboard=unnamed
-endif
-
 "key to insert mode with paste using F2 key
 map <F2> :set paste<CR>i
 " Leave paste mode on exit
@@ -195,3 +190,40 @@ map <C-p> :cp<CR>
 set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
+
+" Abbreviations
+"
+"
+" Function definitions
+"
+function! ExpandWidth()
+    if exists('b:blarghmatey_maxWidth_lastWidth')
+        let widthResult = b:blarghmatey_maxWidth_lastWidth
+        unlet b:blarghmatey_maxWidth_lastWidth
+    else
+        let b:blarghmatey_maxWidth_lastWidth = winwidth(0)
+        let maxWidth = max(map(getline(1,'$'), 'len(v:val)'))
+        let g:blarghmatey#maxWidth#default = 200
+        let widthResult = min([ ( maxWidth + 10 ), g:blarghmatey#maxWidth#default ])
+    endif
+    execute 'vertical resize ' . widthResult
+endfunction
+
+function! ExpandHeight()
+    if exists('b:blarghmatey_maxHeight_lastHeight')
+        let heightResult = b:blarghmatey_maxHeight_lastHeight
+        unlet b:blarghmatey_maxHeight_lastHeight
+    else
+        let b:blarghmatey_maxHeight_lastHeight = winheight(0)
+        let maxHeight = &lines
+        let heightResult = maxHeight
+        if exists('g:blarghmatey#maxHeight#heightLimit')
+            let heightLimit = g:blarghmatey#maxHeight#heightLimit
+            let heightResult = min([maxHeight, heightLimit])
+        endif
+    endif
+    execute 'resize ' . heightResult
+endfunction
+
+:map <leader>m :call ExpandWidth()<CR>
+:map <leader>M :call ExpandHeight()<CR>

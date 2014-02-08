@@ -1,3 +1,7 @@
+HISTFILE=~/.history
+HISTFILESIZE=4000
+HISTSIZE=4000
+source ~/.bin/tmuxinator.zsh
 alias tmux="TERM=screen-256color-bce tmux"
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
@@ -11,9 +15,11 @@ for function in ~/.zsh/functions/*; do
 done
 
 # history settings
-setopt histignoredups
-SAVEHIST=4096
-HISTSIZE=4096
+setopt appendhistory histignoredups
+setopt histignorespace extended_history
+setopt INC_APPEND_HISTORY share_history
+SAVEHIST=8096
+HISTSIZE=8096
 
 # awesome cd movements from zshkit
 setopt autocd autopushd pushdminus pushdsilent pushdtohome cdablevars
