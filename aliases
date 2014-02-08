@@ -19,6 +19,7 @@ alias rake='noglob rake'
 # git
 alias gci="git pull --rebase && rake && git push"
 alias gs='git status -sb'
+alias g-commit='git-commit'
 
 # Bundler
 alias b="bundle"

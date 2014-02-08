@@ -1,6 +1,9 @@
 HISTFILE=~/.history
-HISTFILESIZE=4000
-HISTSIZE=4000
+HISTFILESIZE=10000
+HISTSIZE=10000
+
+path+=('~/.dotfiles/bin/')
+
 source ~/.bin/tmuxinator.zsh
 alias tmux="TERM=screen-256color-bce tmux"
 # load our own completion functions
