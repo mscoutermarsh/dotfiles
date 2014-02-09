@@ -2,7 +2,7 @@
 set tags=./tags;./../tags;
 " Leader
 let mapleader = " "
-" Toggle nerdtree with F2
+" Toggle nerdtree with F10
 map <F10> :NERDTreeToggle<CR>
 
 " Reduce timeout after <ESC> is recvd. This is only a good idea on fast links.
