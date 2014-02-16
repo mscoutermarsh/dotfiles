@@ -108,6 +108,9 @@ let g:airline_symbols.space = "\ua0"
 let g:airline_theme='powerlineish'
 set t_Co=256
 
+:set smartcase
+:set ignorecase
+
 
 " Color scheme
 colorscheme monokai
@@ -128,6 +131,15 @@ let g:snippetsEmu_key = "<S-Tab>"
 " Persistent undo
 set undofile
 set undodir=~/.vim/undo
+
+:nnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
+:nnoremap <expr> yy (v:register ==# '"' ? '"+' : '') . 'yy'
+:nnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
+:xnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
+:xnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
+
+" convert hash rockets
+nmap <leader>rh :%s/\v:(\w+) \=\>/\1:/g<cr>
 
 " Tab completion
 " will insert tab at beginning of line,
