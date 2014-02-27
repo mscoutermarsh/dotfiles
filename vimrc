@@ -1,3 +1,4 @@
+:nmap cp :let @" = expand("%:p")
 :au FocusLost * :wa "Save on focus lost
 set tags=./tags;./../tags;
 " Leader

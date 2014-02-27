@@ -1,3 +1,5 @@
+alias ctags="`brew --prefix`/bin/ctags"
+
 # Unix
 alias tlf="tail -f"
 alias ln='ln -v'
