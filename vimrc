@@ -6,6 +6,9 @@ let mapleader = " "
 " Toggle nerdtree with F10
 map <F10> :NERDTreeToggle<CR>
 
+" Current file in nerdtree
+map <F9> :NERDTreeFind<CR>
+
 " Reduce timeout after <ESC> is recvd. This is only a good idea on fast links.
 set ttimeout
 set ttimeoutlen=20
@@ -111,7 +114,7 @@ set t_Co=256
 
 :set smartcase
 :set ignorecase
-
+:set noantialias
 
 " Color scheme
 colorscheme monokai

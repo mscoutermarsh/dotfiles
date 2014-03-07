@@ -1,4 +1,5 @@
 alias ctags="`brew --prefix`/bin/ctags"
+alias s="osascript ~/.dotfiles/SpotifyControl/SpotifyControl.scpt"
 
 # Unix
 alias tlf="tail -f"
