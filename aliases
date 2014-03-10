@@ -1,5 +1,7 @@
 alias ctags="`brew --prefix`/bin/ctags"
 alias s="osascript ~/.dotfiles/SpotifyControl/SpotifyControl.scpt"
+# Now playing: Cher - Believe
+alias sb="osascript ~/.dotfiles/SpotifyControl/SpotifyControl.scpt start spotify:track:2goLsvvODILDzeeiT4dAoR"
 
 # Unix
 alias tlf="tail -f"
@@ -39,8 +41,6 @@ alias giv="gem install -v"
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias m="migrate"
 alias rk="rake"
-alias s="rspec"
-alias z="zeus"
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
