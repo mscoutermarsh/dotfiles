@@ -1,6 +1,7 @@
-:nmap cp :let @" = expand("%:p")
+let $PATH='/usr/local/bin:' . $PATH
+" :nmap cp :let @" = expand("%:p")
 :au FocusLost * :wa "Save on focus lost
-set tags=./tags;./../tags;
+" set tags=./tags;./../tags;
 " Leader
 let mapleader = " "
 " Toggle nerdtree with F10
@@ -82,6 +83,9 @@ augroup vimrcEx
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 augroup END
+
+" bind K to search word under cursor
+nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Softtabs, 2 spaces
 set tabstop=2
