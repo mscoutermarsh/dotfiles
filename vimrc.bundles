@@ -10,6 +10,8 @@ Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
 " Bundle 'altercation/vim-colors-solarized'
+Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'mattn/emmet-vim'
 Bundle 'rking/ag.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'sjl/vitality.vim'
@@ -21,7 +23,7 @@ Bundle 'sickill/vim-monokai'
 " Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
-" Bundle 'thoughtbot/vim-rspec'
+Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-bundler'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-airline'
@@ -37,6 +39,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "tpope/vim-rvm"
+Bundle "skwp/greplace.vim"
 " Bundle "garbas/vim-snipmate"
 " Bundle "vim-ruby/vim-ruby"
 Bundle "scrooloose/syntastic"

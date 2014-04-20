@@ -1,3 +1,4 @@
+let g:user_emmet_leader_key='<c-h>'
 let $PATH='/usr/local/bin:' . $PATH
 " :nmap cp :let @" = expand("%:p")
 :au FocusLost * :wa "Save on focus lost
@@ -20,6 +21,11 @@ set notimeout
 map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
+
+" highlight vertical column of cursor
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline 
+set cursorline 
 
 "key to insert mode with paste using F2 key
 map <F2> :set paste<CR>i
@@ -92,16 +98,26 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+let g:rspec_command = "!bundle exec rspec {spec}"
+let g:rspec_runner = "os_x_iterm"
+
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
+  set grepprg=ag\ --nogroup
+  let g:grep_cmd_opts = '--line-numbers --noheading'
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -l -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
