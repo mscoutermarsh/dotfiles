@@ -1,3 +1,5 @@
+runtime macros/matchit.vim
+
 let g:user_emmet_leader_key='<c-h>'
 let $PATH='/usr/local/bin:' . $PATH
 " :nmap cp :let @" = expand("%:p")
