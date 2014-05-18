@@ -1,15 +1,4 @@
-    let g:startify_custom_header = [
-                \ '   __      ___            ______ ____   ',
-                \ '   \ \    / (_)           |____  |___ \ ',
-                \ '    \ \  / / _ _ __ ___       / /  __) |',
-                \ '     \ \/ / | | ''_ ` _ \     / /  |__ <',
-                \ '      \  /  | | | | | | |   / /   ___) |',
-                \ '       \/   |_|_| |_| |_|  /_(_) |____/ ',
-                \ '',
-                \ '',
-                \ ]
-
-
+set shell=/bin/bash
 runtime macros/matchit.vim
 
 let g:user_emmet_leader_key='<c-h>'
@@ -223,7 +212,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " configure syntastic syntax checking to check on open as well as save
-let g:syntastic_check_on_open=1
+let g:syntastic_ruby_checkers = ['mri']
+let g:syntastic_enable_highlighting=0
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")

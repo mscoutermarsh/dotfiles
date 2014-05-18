@@ -1,6 +1,5 @@
 set nocompatible
 
-
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -9,13 +8,10 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
-" Bundle 'altercation/vim-colors-solarized'
-" Bundle 'mhinz/vim-startify'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'mattn/emmet-vim'
 Bundle 'rking/ag.vim'
 Bundle 'sjl/vitality.vim'
-" Bundle 'tpope/vim-fugitive'
 Bundle 'sickill/vim-monokai'
 Bundle 'kien/ctrlp.vim'
 Bundle 'thoughtbot/vim-rspec'
@@ -23,10 +19,7 @@ Bundle 'tpope/vim-bundler'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-endwise'
-" Bundle 'tpope/vim-fugitive'
-" Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
-" Bundle 'dockyard/vim-easydir'
 Bundle 'tmhedberg/matchit'
 Bundle 'kana/vim-textobj-user'
 Bundle 'jc00ke/thor.vim'
