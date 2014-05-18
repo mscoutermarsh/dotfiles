@@ -10,7 +10,7 @@ Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
 " Bundle 'altercation/vim-colors-solarized'
-Bundle 'mhinz/vim-startify'
+" Bundle 'mhinz/vim-startify'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'mattn/emmet-vim'
 Bundle 'rking/ag.vim'
