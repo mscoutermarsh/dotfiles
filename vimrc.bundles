@@ -24,7 +24,7 @@ Bundle 'tmhedberg/matchit'
 Bundle 'kana/vim-textobj-user'
 Bundle 'jc00ke/thor.vim'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-" Bundle 'vim-scripts/ctags.vim'
+Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'scrooloose/nerdtree'
 Bundle "MarcWeber/vim-addon-mw-utils"
