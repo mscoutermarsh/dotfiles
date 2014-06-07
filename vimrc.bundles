@@ -32,5 +32,6 @@ Bundle "tomtom/tlib_vim"
 Bundle "skwp/greplace.vim"
 Bundle "vim-ruby/vim-ruby"
 Bundle "scrooloose/syntastic"
+Bundle "tpope/vim-haml"
 
 filetype on
