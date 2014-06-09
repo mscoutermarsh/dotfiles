@@ -145,6 +145,7 @@ set background=dark
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 set encoding=utf-8
+hi Search guibg=LightBlue
 
 " Highlight line number of where cursor currently is
 hi CursorLineNr guifg=#050505
@@ -267,3 +268,20 @@ endfunction
 
 :map <leader>m :call ExpandWidth()<CR>
 :map <leader>M :call ExpandHeight()<CR>
+
+" Easy motion
+" Gif config
+nmap s <Plug>(easymotion-s2)
+nmap t <Plug>(easymotion-t2)
+"
+" Gif config
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+" Without these mappings, `n` & `N` works fine. (These mappings just provide
+" different highlight method and have some other features )
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionMoveHL Search
