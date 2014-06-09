@@ -284,4 +284,4 @@ omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 hi link EasyMotionTarget ErrorMsg
-hi link EasyMotionMoveHL Search
+hi link EasyMotionMoveHL ErrorMsg
