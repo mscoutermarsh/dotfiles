@@ -33,5 +33,6 @@ Bundle "skwp/greplace.vim"
 Bundle "vim-ruby/vim-ruby"
 Bundle "scrooloose/syntastic"
 Bundle "tpope/vim-haml"
+Bundle "Lokaltog/vim-easymotion"
 
 filetype on
