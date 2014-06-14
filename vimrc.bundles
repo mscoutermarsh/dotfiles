@@ -9,6 +9,7 @@ Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'blarghmatey/split-expander'
 Bundle 'mattn/emmet-vim'
 Bundle 'rking/ag.vim'
 Bundle 'sjl/vitality.vim'

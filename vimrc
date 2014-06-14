@@ -101,12 +101,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
 let g:rspec_command = "!bundle exec rspec {spec}"
 let g:rspec_runner = "os_x_iterm"
 
@@ -237,37 +231,6 @@ map <ScrollWheelDown> <C-E>
 "
 " Function definitions
 "
-function! ExpandWidth()
-    if exists('b:blarghmatey_maxWidth_lastWidth')
-        let widthResult = b:blarghmatey_maxWidth_lastWidth
-        unlet b:blarghmatey_maxWidth_lastWidth
-    else
-        let b:blarghmatey_maxWidth_lastWidth = winwidth(0)
-        let maxWidth = max(map(getline(1,'$'), 'len(v:val)'))
-        let g:blarghmatey#maxWidth#default = 200
-        let widthResult = min([ ( maxWidth + 10 ), g:blarghmatey#maxWidth#default ])
-    endif
-    execute 'vertical resize ' . widthResult
-endfunction
-
-function! ExpandHeight()
-    if exists('b:blarghmatey_maxHeight_lastHeight')
-        let heightResult = b:blarghmatey_maxHeight_lastHeight
-        unlet b:blarghmatey_maxHeight_lastHeight
-    else
-        let b:blarghmatey_maxHeight_lastHeight = winheight(0)
-        let maxHeight = &lines
-        let heightResult = maxHeight
-        if exists('g:blarghmatey#maxHeight#heightLimit')
-            let heightLimit = g:blarghmatey#maxHeight#heightLimit
-            let heightResult = min([maxHeight, heightLimit])
-        endif
-    endif
-    execute 'resize ' . heightResult
-endfunction
-
-:map <leader>m :call ExpandWidth()<CR>
-:map <leader>M :call ExpandHeight()<CR>
 
 " Easy motion
 " Gif config
