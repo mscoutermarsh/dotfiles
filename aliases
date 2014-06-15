@@ -26,14 +26,9 @@ alias rake='noglob rake'
 # git
 alias gci="git pull --rebase && rake && git push"
 alias gs='git status -sb'
-alias g-commit='git-commit'
 
 # Bundler
 alias b="bundle"
-
-# Tests and Specs
-alias t="ruby -I test"
-alias cuc="bundle exec cucumber"
 
 # Rubygems
 alias gi="gem install"
@@ -41,7 +36,6 @@ alias giv="gem install -v"
 
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
-alias m="migrate"
 alias rk="rake"
 
 # Include custom aliases
