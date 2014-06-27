@@ -7,7 +7,7 @@ let $PATH='/usr/local/bin:' . $PATH
 :au FocusLost * :wa "Save on focus lost
 " set tags=./tags;./../tags;
 " Leader
-let mapleader = " "
+let mapleader = "\<Space>"
 " Toggle nerdtree with F10
 map <F10> :NERDTreeToggle<CR>
 
@@ -231,6 +231,7 @@ map <ScrollWheelDown> <C-E>
 "
 " Function definitions
 "
+
 
 " Easy motion
 " Gif config
