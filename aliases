@@ -1,4 +1,3 @@
-alias ctags="`brew --prefix`/bin/ctags"
 alias s="osascript ~/.dotfiles/SpotifyControl/SpotifyControl.scpt"
 alias sn="osascript ~/.dotfiles/SpotifyControl/SpotifyControl.scpt next"
 alias sp="osascript ~/.dotfiles/SpotifyControl/SpotifyControl.scpt prev"
@@ -15,7 +14,6 @@ alias ll='ls -al'
 alias lh='ls -Alh'
 alias -g G='| grep'
 alias -g M='| less'
-alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
 alias e="$EDITOR"
 alias v="$VISUAL"
@@ -24,7 +22,6 @@ alias v="$VISUAL"
 alias rake='noglob rake'
 
 # git
-alias gci="git pull --rebase && rake && git push"
 alias gs='git status -sb'
 
 # Bundler
