@@ -1,5 +1,12 @@
 set shell=/bin/bash
 runtime macros/matchit.vim
+" use old regext engine. speed up ruby syntax highlighting
+set re=1
+
+set ttyfast
+set lazyredraw
+
+let g:ruby_path="~/.rvm/bin/ruby"
 
 let g:user_emmet_leader_key='<c-h>'
 let $PATH='/usr/local/bin:' . $PATH
