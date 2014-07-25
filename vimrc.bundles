@@ -8,6 +8,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
+Bundle 'tpope/vim-sensible'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'blarghmatey/split-expander'
 Bundle 'mattn/emmet-vim'
