@@ -4,7 +4,6 @@ HISTSIZE=10000
 
 path+=('~/.dotfiles/bin/')
 
-source ~/.bin/tmuxinator.zsh
 alias tmux="TERM=screen-256color-bce tmux"
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
