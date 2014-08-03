@@ -34,6 +34,7 @@ alias gi="gem install"
 
 # Rails
 alias rk="rake"
+alias rc="bundle exec rails c"
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
