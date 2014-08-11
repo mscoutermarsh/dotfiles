@@ -3,6 +3,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# history settings
+setopt appendhistory histignoredups
+setopt histignorespace extended_history
+setopt INC_APPEND_HISTORY share_history
+SAVEHIST=8096
+HISTSIZE=8096
+
 # Customize to your needs...
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
@@ -11,6 +18,9 @@ bindkey "^P" history-search-backward
 bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
+
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # use vim as the visual editor
 export VISUAL=vim
