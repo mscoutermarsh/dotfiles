@@ -22,6 +22,7 @@ alias v="$VISUAL"
 alias rake='noglob rake'
 
 # git
+alias g='git'
 alias gs='git status -sb'
 
 # Bundler
