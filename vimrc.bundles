@@ -38,5 +38,6 @@ Bundle "tpope/vim-haml"
 Bundle "Lokaltog/vim-easymotion"
 Bundle "dkprice/vim-easygrep"
 Bundle "tpope/vim-rails"
+Bundle "myusuf3/numbers.vim"
 
 filetype on

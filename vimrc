@@ -235,17 +235,6 @@ au BufWritePre *.rb :%s/\s\+$//e
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 
-set mouse=a
-map <ScrollWheelUp> <C-Y>
-map <ScrollWheelDown> <C-E>
-
-" Abbreviations
-"
-"
-" Function definitions
-"
-
-
 " Easy motion
 " Gif config
 nmap s <Plug>(easymotion-s2)
