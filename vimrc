@@ -108,7 +108,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-let g:rspec_command = "!bundle exec rspec {spec}"
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 let g:rspec_runner = "os_x_iterm"
 
 " RSpec.vim mappings
@@ -251,3 +251,9 @@ map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionMoveHL ErrorMsg
+
+" Easy navigation between splits. Instead of ctrl-w + j. Just ctrl-j
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>

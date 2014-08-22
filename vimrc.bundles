@@ -39,5 +39,7 @@ Bundle "Lokaltog/vim-easymotion"
 Bundle "dkprice/vim-easygrep"
 Bundle "tpope/vim-rails"
 Bundle "myusuf3/numbers.vim"
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'jgdavey/tslime.vim'
 
 filetype on

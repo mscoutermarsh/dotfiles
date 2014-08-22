@@ -24,18 +24,21 @@ zstyle ':prezto:*:*' color 'yes'
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
-  'ruby' \
   'environment' \
   'terminal' \
   'editor' \
   'history' \
-  'git' \
   'directory' \
   'spectrum' \
+  'prompt' \
   'utility' \
+  'tmux' \
   'completion' \
+  'ruby' \
   'history-substring-search' \
-  'prompt'
+  'git' \
+  'osx' \
+  'syntax-highlighting'
 
 #
 # Editor
@@ -146,12 +149,7 @@ zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 # Set the tab title format.
 # zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 
-#
-# Tmux
-#
-
-# Auto start a session when Zsh is launched in a local terminal.
-# zstyle ':prezto:module:tmux:auto-start' local 'yes'
-
 # Auto start a session when Zsh is launched in a SSH connection.
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
+# Auto start a session when Zsh is launched in a local terminal.
+zstyle ':prezto:module:tmux:auto-start' local 'yes'
