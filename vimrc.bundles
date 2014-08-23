@@ -9,9 +9,9 @@ Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
 Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-fugitive'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'blarghmatey/split-expander'
-Bundle 'mattn/emmet-vim'
 Bundle 'rking/ag.vim'
 Bundle 'sjl/vitality.vim'
 Bundle 'sickill/vim-monokai'
@@ -26,7 +26,6 @@ Bundle 'tmhedberg/matchit'
 Bundle 'kana/vim-textobj-user'
 Bundle 'jc00ke/thor.vim'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'scrooloose/nerdtree'
 Bundle "MarcWeber/vim-addon-mw-utils"
