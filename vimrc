@@ -8,7 +8,6 @@ set lazyredraw
 
 let g:ruby_path="~/.rvm/bin/ruby"
 
-let g:user_emmet_leader_key='<c-h>'
 let $PATH='/usr/local/bin:' . $PATH
 " :nmap cp :let @" = expand("%:p")
 :au FocusLost * :wa "Save on focus lost
