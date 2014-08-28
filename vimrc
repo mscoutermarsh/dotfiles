@@ -9,9 +9,9 @@ set lazyredraw
 let g:ruby_path="~/.rvm/bin/ruby"
 
 let $PATH='/usr/local/bin:' . $PATH
-" :nmap cp :let @" = expand("%:p")
+
 :au FocusLost * :wa "Save on focus lost
-" set tags=./tags;./../tags;
+
 " Leader
 let mapleader = "\<Space>"
 " Toggle nerdtree with F10
