@@ -41,5 +41,6 @@ Bundle "myusuf3/numbers.vim"
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'svermeulen/vim-easyclip'
+Bundle 'henrik/vim-qargs'
 
 filetype on
