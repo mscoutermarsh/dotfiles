@@ -12,6 +12,9 @@ let $PATH='/usr/local/bin:' . $PATH
 
 :au FocusLost * :wa "Save on focus lost
 
+" Sessions
+let g:session_autoload = 'no'
+
 " Leader
 let mapleader = "\<Space>"
 " Toggle nerdtree with F10

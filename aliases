@@ -29,6 +29,7 @@ alias gs='git status -sb'
 alias b="bundle"
 alias bi="bundle install"
 alias be="bundle exec"
+alias kbundle="bundle"
 
 # Rubygems
 alias gi="gem install"
