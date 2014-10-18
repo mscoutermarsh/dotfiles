@@ -24,15 +24,23 @@ $ env RCRC=$HOME/dotfiles/rcrc rcup
 ```
 
 ### Recommended
-Use MacVim. This will override your vim command.
+
+**MacVim**
 ```
 $ brew install macvim --override-system-vim
 ```
 
+**iterm2**  
 Use iterm2 instead of Terminal: http://iterm2.com/
 
+**Prezto**  
+Use Prezto instead of Bash. info & installation instructions here: https://github.com/sorin-ionescu/prezto
 
-I use Prezto, info & installation instructions here: https://github.com/sorin-ionescu/prezto
+**Tmux**  
+```
+$ brew install tmux
+$ brew install reattach-to-user-namespace
+```
 
 #### Custom Fonts
 For making Airline (vim plugin) look nice, need to use a custom font. See here: https://github.com/Lokaltog/powerline-fonts
