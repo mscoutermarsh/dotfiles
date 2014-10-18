@@ -23,4 +23,6 @@ Run rcm
 $ env RCRC=$HOME/dotfiles/rcrc rcup
 ```
 
+I also use Prezto, info & installation instructions here: https://github.com/sorin-ionescu/prezto
+
 These are a heavily modified version of Thoughtbot's dotfiles. More detailed instructions are available here: http://github.com/thoughtbot/dotfiles.
