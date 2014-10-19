@@ -141,7 +141,7 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
-let g:airline_theme='powerlineish'
+let g:airline_theme='solarized'
 set t_Co=256
 
 :set smartcase
@@ -149,12 +149,11 @@ set t_Co=256
 :set noantialias
 
 " Color scheme
-colorscheme monokai
+colorscheme solarized
 set background=dark
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 set encoding=utf-8
-hi Search guibg=LightBlue
 
 " Highlight line number of where cursor currently is
 hi CursorLineNr guifg=#050505

@@ -14,7 +14,6 @@ Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'blarghmatey/split-expander'
 Bundle 'rking/ag.vim'
 Bundle 'sjl/vitality.vim'
-Bundle 'sickill/vim-monokai'
 Bundle 'kien/ctrlp.vim'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-bundler'
@@ -24,7 +23,6 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-surround'
 Bundle 'tmhedberg/matchit'
 Bundle 'kana/vim-textobj-user'
-Bundle 'jc00ke/thor.vim'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'vim-scripts/tComment'
 Bundle 'scrooloose/nerdtree'
@@ -37,6 +35,7 @@ Bundle "tpope/vim-haml"
 Bundle "Lokaltog/vim-easymotion"
 Bundle "dkprice/vim-easygrep"
 Bundle "tpope/vim-rails"
+Bundle "altercation/vim-colors-solarized"
 Bundle "myusuf3/numbers.vim"
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
