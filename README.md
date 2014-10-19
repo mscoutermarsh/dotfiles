@@ -22,6 +22,8 @@ Run rcm
 ```
 $ env RCRC=$HOME/dotfiles/rcrc rcup
 ```
+### Git Config
+Make sure you update ```gitconfig``` with your own name and email address. Otherwise you'll be committing as me. :smile_cat:
 
 ### Recommended
 
