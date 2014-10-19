@@ -32,7 +32,7 @@ Bundle "skwp/greplace.vim"
 Bundle "vim-ruby/vim-ruby"
 Bundle "scrooloose/syntastic"
 Bundle "tpope/vim-haml"
-Bundle "Lokaltog/vim-easymotion"
+Bundle 'Lokaltog/vim-easymotion'
 Bundle "dkprice/vim-easygrep"
 Bundle "tpope/vim-rails"
 Bundle "altercation/vim-colors-solarized"

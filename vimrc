@@ -59,6 +59,7 @@ set history=500
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
+set hlsearch      " highlight matches
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 
@@ -151,12 +152,11 @@ set t_Co=256
 " Color scheme
 colorscheme solarized
 set background=dark
-highlight NonText guibg=#060606
-highlight Folded  guibg=#0A0A0A guifg=#9090D0
 set encoding=utf-8
 
 " Highlight line number of where cursor currently is
 hi CursorLineNr guifg=#050505
+
 " Numbers
 set number
 set numberwidth=5
@@ -165,8 +165,10 @@ set numberwidth=5
 let g:snippetsEmu_key = "<S-Tab>"
 
 " Persistent undo
+set undodir=~/.vim/undo/
 set undofile
-set undodir=~/.vim/undo
+set undolevels=1000
+set undoreload=10000
 
 :nnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
 :nnoremap <expr> yy (v:register ==# '"' ? '"+' : '') . 'yy'
@@ -235,23 +237,6 @@ au BufWritePre *.rb :%s/\s\+$//e
 " cmd n, cmd p for fwd/backward in search
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
-
-" Easy motion
-" Gif config
-nmap s <Plug>(easymotion-s2)
-nmap t <Plug>(easymotion-t2)
-"
-" Gif config
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-
-" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
-" Without these mappings, `n` & `N` works fine. (These mappings just provide
-" different highlight method and have some other features )
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
-hi link EasyMotionTarget ErrorMsg
-hi link EasyMotionMoveHL ErrorMsg
 
 " Easy navigation between splits. Instead of ctrl-w + j. Just ctrl-j
 nnoremap <C-J> <C-W><C-J>
