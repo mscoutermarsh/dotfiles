@@ -1,14 +1,25 @@
-# makes color constants available
-autoload -U colors
-colors
+#
+# Executes commands at login post-zshrc.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
 
-# enable colored output from ls, etc
+# Execute code that does not affect the current session in the background.
+{
+  # Compile the completion dump to increase startup speed.
+  zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
+  if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
+    zcompile "$zcompdump"
+  fi
+} &!
+
 export CLICOLOR=1
 
-# expand functions in the prompt
-setopt promptsubst
-
-# load thoughtbot/dotfiles scripts
-export PATH="$HOME/.bin:$PATH"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Print a random, hopefully interesting, adage.
+if (( $+commands[fortune] )); then
+  if [[ -t 0 || -t 1 ]]; then
+    fortune -a
+    print
+  fi
+fi
