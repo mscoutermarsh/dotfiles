@@ -1,8 +1,8 @@
-alias s="osascript ~/.dotfiles/SpotifyControl/SpotifyControl.scpt"
-alias sn="osascript ~/.dotfiles/SpotifyControl/SpotifyControl.scpt next"
-alias sp="osascript ~/.dotfiles/SpotifyControl/SpotifyControl.scpt prev"
+alias s="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt"
+alias sn="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt next"
+alias sp="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt prev"
 # Now playing: Cher - Believe
-alias sb="osascript ~/.dotfiles/SpotifyControl/SpotifyControl.scpt start spotify:track:2goLsvvODILDzeeiT4dAoR"
+alias sb="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt start spotify:track:2goLsvvODILDzeeiT4dAoR"
 
 # Unix
 alias tlf="tail -f"

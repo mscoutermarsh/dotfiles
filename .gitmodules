@@ -1,0 +1,3 @@
+[submodule "SpotifyControl"]
+	path = SpotifyControl
+	url = https://github.com/dronir/SpotifyControl
