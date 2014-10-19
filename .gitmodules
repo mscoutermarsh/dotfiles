@@ -1,3 +1,6 @@
 [submodule "SpotifyControl"]
 	path = SpotifyControl
 	url = https://github.com/dronir/SpotifyControl
+[submodule "powerline-fonts"]
+	path = powerline-fonts
+	url = https://github.com/Lokaltog/powerline-fonts
