@@ -22,7 +22,7 @@
 [include]
   path = .gitconfig.local
 [commit]
-  template = ~/.gitmessage
+	template = /Users/mike/.gitmessage
 [user]
   name = Mike Coutermarsh
   email = coutermarsh.mike@gmail.com
@@ -39,3 +39,5 @@
 [mergetool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
+[credential]
+	helper = osxkeychain
