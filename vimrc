@@ -15,11 +15,20 @@ let $PATH='/usr/local/bin:' . $PATH
 " Sessions
 let g:session_autoload = 'no'
 
-" Leader
+" Leader Mappings
 let mapleader = "\<Space>"
+map <Leader>w :update<CR>
+map <Leader>q :qall<CR>
+"
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+
 " Toggle nerdtree with F10
 map <F10> :NERDTreeToggle<CR>
-
 " Current file in nerdtree
 map <F9> :NERDTreeFind<CR>
 
@@ -30,9 +39,6 @@ set notimeout
 
 " Edit another file in the same directory as the current file
 " uses expression to extract path from current file's path
-map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
-map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
-map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
 " highlight vertical column of cursor
 au WinLeave * set nocursorline nocursorcolumn
@@ -114,12 +120,6 @@ set expandtab
 let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 let g:rspec_runner = "os_x_iterm"
 
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
@@ -196,9 +196,6 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-
-" Index ctags from any project, including those outside Rails
-map <Leader>ct :!ctags -R .<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
