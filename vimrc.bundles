@@ -41,5 +41,6 @@ Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'henrik/vim-qargs'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'bkad/CamelCaseMotion'
 
 filetype on

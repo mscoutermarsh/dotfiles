@@ -19,12 +19,14 @@ let g:session_autoload = 'no'
 let mapleader = "\<Space>"
 map <Leader>w :update<CR>
 map <Leader>q :qall<CR>
+map <Leader>a :A<CR>
+map <Leader>v :AV<CR>
+
 "
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
 
 
 " Toggle nerdtree with F10
@@ -111,6 +113,9 @@ augroup END
 
 " bind K to search word under cursor
 nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" use camelcase version of w (respects _'s)
+map <silent> w <Plug>CamelCaseMotion_w
 
 " Softtabs, 2 spaces
 set tabstop=2
