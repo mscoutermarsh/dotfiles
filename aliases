@@ -24,11 +24,14 @@ alias rake='noglob rake'
 # git
 alias g='git'
 alias gs='git status -sb'
+# because i make this typo a lot
+alias ggs='gs'
 
 # Bundler
 alias b="bundle"
 alias bi="bundle install"
 alias be="bundle exec"
+# because i make this typo a lot
 alias kbundle="bundle"
 
 # Rubygems
