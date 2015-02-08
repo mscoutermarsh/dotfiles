@@ -27,10 +27,18 @@ $ env RCRC=$HOME/dotfiles/rcrc rcup
 RCM creates dotfile symlinks (`.vimrc` -> `/dotfiles/vimrc`) from your home directory to your `/dotfiles/` directory.
 
 ### Installing Plugins
-Plugins are listed in `vimrc.bundles`. To install them, open vim and type `:BundleInstall`. And then restart vim. You'll need to do this for everything to work.
+Plugins are listed in `vimrc.bundles`.
+
+To install them you'll need vundle. Installation directions are here: https://github.com/gmarik/Vundle.vim.
+Once vundle is installed. Open vim and type `:BundleInstall`. And then restart vim. You'll need to do this for everything to work.
 
 ### Git Config
 Make sure you update ```gitconfig``` with your own name and email address. Otherwise you'll be committing as me. :smile_cat:
+
+
+#### Custom Fonts
+You'll need to use a custom font for Airline to look nice. (Seeing weird symbols? This is why!). See here: https://github.com/Lokaltog/powerline-fonts
+I use sourcecode pro. Once installed, go into iterm2 and Profiles > Text. Change both fonts.
 
 ### Recommended
 
@@ -52,11 +60,6 @@ Use Prezto instead of Bash. info & installation instructions here: https://githu
 $ brew install tmux
 $ brew install reattach-to-user-namespace
 ```
-
-#### Custom Fonts
-For making Airline (vim plugin) look nice, need to use a custom font. See here: https://github.com/Lokaltog/powerline-fonts
-I use sourcecode pro. Once installed, go into iterm2 and Profiles > Text. Change both fonts.
-
 
 ---
 These are a heavily modified version of Thoughtbot's dotfiles. More detailed instructions are available here: http://github.com/thoughtbot/dotfiles.
