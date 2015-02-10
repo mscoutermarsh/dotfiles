@@ -41,3 +41,9 @@ export PATH=".git/safe/../../bin:$PATH"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+
+# For connecting to docker from docker client
+if (( $+commands[boot2docker] )) ; then
+  $(boot2docker shellinit 2>/dev/null)
+fi
