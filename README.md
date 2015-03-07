@@ -35,14 +35,14 @@ Once vundle is installed. Open vim (`$ vim`) and type `:BundleInstall`. And then
 ### Git Config
 Make sure you update ```gitconfig``` with your own name and email address. Otherwise you'll be committing as me. :smile_cat:
 
-**iterm2**  
-Use iterm2 instead of Terminal: http://iterm2.com/
-
 #### Custom Fonts
 You'll need to use a custom font for Airline to look nice. (Seeing weird symbols? This is why!). See here: https://github.com/Lokaltog/powerline-fonts
 I use sourcecode pro. Once installed, go into iterm2 and Profiles > Text. Change both fonts.
 
 ### Recommended
+
+**iterm2**  
+Use iterm2 instead of Terminal: http://iterm2.com/
 
 **MacVim**
 By default OSX has an older version of Vim installed. I recommend installing MacVim and running it from within iterm2. This can be done with brew.
