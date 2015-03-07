@@ -44,7 +44,7 @@ I use sourcecode pro. Once installed, go into iterm2 and Profiles > Text. Change
 **iterm2**  
 Use iterm2 instead of Terminal: http://iterm2.com/
 
-**MacVim**
+**MacVim**  
 By default OSX has an older version of Vim installed. I recommend installing MacVim and running it from within iterm2. This can be done with brew.
 ```
 $ brew install macvim --override-system-vim
