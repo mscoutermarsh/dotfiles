@@ -5,6 +5,10 @@ dotfiles
 ![screenshot](https://github.com/mscoutermarsh/dotfiles/blob/master/screenshot.png)
 (Here's what my setup looks like. Vim/Tmux)
 
+## New to Vim?
++ [Learning Vim in a Week](https://mikecoutermarsh.com/boston-vim-learning-vim-in-a-week/)
++ [Upcase: The Art of Vim](https://upcase.com/vim)
+
 ## Installation
 
 Clone this repo (or your own fork!) to your **home** directory (`/Users/username`).
