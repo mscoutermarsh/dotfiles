@@ -7,7 +7,7 @@ dotfiles
 
 ## Installation
 
-Clone this repo (or your own fork!) to your **home** directory.
+Clone this repo (or your own fork!) to your **home** directory (`/Users/username`).
 ```
 $ cd ~
 $ git clone https://github.com/mscoutermarsh/dotfiles
@@ -30,11 +30,13 @@ RCM creates dotfile symlinks (`.vimrc` -> `/dotfiles/vimrc`) from your home dire
 Plugins are listed in `vimrc.bundles`.
 
 To install them you'll need vundle. Installation directions are here: https://github.com/gmarik/Vundle.vim.
-Once vundle is installed. Open vim and type `:BundleInstall`. And then restart vim. You'll need to do this for everything to work.
+Once vundle is installed. Open vim (`$ vim`) and type `:BundleInstall`. And then restart vim. You'll need to do this for all the plugins to work.
 
 ### Git Config
 Make sure you update ```gitconfig``` with your own name and email address. Otherwise you'll be committing as me. :smile_cat:
 
+**iterm2**  
+Use iterm2 instead of Terminal: http://iterm2.com/
 
 #### Custom Fonts
 You'll need to use a custom font for Airline to look nice. (Seeing weird symbols? This is why!). See here: https://github.com/Lokaltog/powerline-fonts
@@ -43,17 +45,14 @@ I use sourcecode pro. Once installed, go into iterm2 and Profiles > Text. Change
 ### Recommended
 
 **MacVim**
-By default OSX has an older version of Vim. I recommend installing MacVim and running it from within iterm. This can be done with brew.
+By default OSX has an older version of Vim installed. I recommend installing MacVim and running it from within iterm2. This can be done with brew.
 ```
 $ brew install macvim --override-system-vim
 ```
 This overwrites your default Vim installation. You should restart terminal after installing.
 
-**iterm2**  
-Use iterm2 instead of Terminal: http://iterm2.com/
-
 **Prezto**  
-Use Prezto instead of Bash. info & installation instructions here: https://github.com/sorin-ionescu/prezto
+I use Prezto instead of Bash. Info & installation instructions here: https://github.com/sorin-ionescu/prezto
 
 **Tmux**  
 ```
