@@ -117,7 +117,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("bin/rspec {spec}\n")'
 let g:rspec_runner = "os_x_iterm"
 
 " Display extra whitespace
