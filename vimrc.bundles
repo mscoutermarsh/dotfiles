@@ -30,6 +30,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "skwp/greplace.vim"
 Bundle "vim-ruby/vim-ruby"
+Bundle "elixir-lang/vim-elixir"
 Bundle "scrooloose/syntastic"
 Bundle "tpope/vim-haml"
 Bundle 'Lokaltog/vim-easymotion'
