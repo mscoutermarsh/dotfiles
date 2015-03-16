@@ -28,6 +28,8 @@ alias gs='git status -sb'
 alias gcb='git rev-parse --abbrev-ref HEAD | pbcopy'
 # because i make this typo a lot
 alias ggs='gs'
+# open a pull request, requires Hub to be installed (hub.github.com)
+alias gpr='git pull-request'
 
 # Bundler
 alias b="bundle"
@@ -41,7 +43,7 @@ alias gi="gem install"
 
 # Rails
 alias rk="rake"
-alias rc="bundle exec rails c"
+alias rc="bin/rails c"
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
