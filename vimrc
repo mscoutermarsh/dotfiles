@@ -16,7 +16,7 @@ let $PATH='/usr/local/bin:' . $PATH
 let g:session_autoload = 'no'
 
 " Leader Mappings
-let mapleader = "\<Space>"
+map <Space> <leader>
 map <Leader>w :update<CR>
 map <Leader>q :qall<CR>
 "
@@ -42,8 +42,8 @@ set notimeout
 
 " highlight vertical column of cursor
 au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline 
-set cursorline 
+au WinEnter * set cursorline
+set cursorline
 
 "key to insert mode with paste using F2 key
 map <F2> :set paste<CR>i
