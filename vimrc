@@ -229,7 +229,17 @@ if filereadable($HOME . "/.vimrc.local")
 endif
 
 " Remove trailing whitespace on save for ruby files.
-au BufWritePre *.rb :%s/\s\+$//e
+function! s:RemoveTrailingWhitespaces()
+  "Save last cursor position
+  let l = line(".")
+  let c = col(".")
+
+  %s/\s\+$//ge
+
+  call cursor(l,c)
+endfunction
+
+au BufWritePre * :call <SID>RemoveTrailingWhitespaces()
 
 " cmd n, cmd p for fwd/backward in search
 map <C-n> :cn<CR>
