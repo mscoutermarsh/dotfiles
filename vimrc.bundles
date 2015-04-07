@@ -42,5 +42,6 @@ Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'henrik/vim-qargs'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'jsx/jsx.vim'
 
 filetype on
