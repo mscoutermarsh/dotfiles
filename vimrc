@@ -240,7 +240,7 @@ function! s:RemoveTrailingWhitespaces()
   call cursor(l,c)
 endfunction
 
-au BufWritePre * :call <SID>MyFormattingSubs()
+au BufWritePre * :call <SID>RemoveTrailingWhitespaces()
 
 " cmd n, cmd p for fwd/backward in search
 map <C-n> :cn<CR>
