@@ -19,6 +19,9 @@ let g:session_autoload = 'no'
 map <Space> <leader>
 map <Leader>w :update<CR>
 map <Leader>q :qall<CR>
+map <Leader>gs :Gstatus<CR>
+map <Leader>gc :Gcommit<CR>
+map <Leader>gp :Gpush<CR>
 "
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>

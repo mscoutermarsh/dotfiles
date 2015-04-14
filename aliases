@@ -17,6 +17,8 @@ alias -g M='| less'
 alias -g ONE="| awk '{ print \$1}'"
 alias e="$EDITOR"
 alias v="$VISUAL"
+# because typing is hard
+alias bim="vim"
 
 # fix for passing params to rake tasks
 alias rake='noglob rake'
