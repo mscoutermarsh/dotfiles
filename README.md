@@ -48,6 +48,8 @@ I use sourcecode pro. Once installed, go into iterm2 and Profiles > Text. Change
 **iterm2**  
 Use iterm2 instead of Terminal: http://iterm2.com/
 
+There are two themes available for iterm2 inside this repository. Both solarized dark and light (to match vim!) Take a look at the `iterm2` directory.
+
 **MacVim**  
 By default OSX has an older version of Vim installed. I recommend installing MacVim and running it from within iterm2. This can be done with brew.
 ```
