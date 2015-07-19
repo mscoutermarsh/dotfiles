@@ -47,5 +47,9 @@ alias gi="gem install"
 alias rk="rake"
 alias rc="bin/rails c"
 
+# Config Files
+alias vimrc="vim ~/.vimrc"
+alias zshrc="vim ~/.zshrc"
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
