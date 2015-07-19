@@ -40,4 +40,6 @@
 	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
 [credential]
-	helper = osxkeychain
+
+[hub]
+protocol = https
