@@ -8,6 +8,9 @@ set lazyredraw
 
 let g:ruby_path="~/.rvm/bin/ruby"
 
+" have jsx highlighting/indenting work in .js files as well
+let g:jsx_ext_required = 0
+
 let $PATH='/usr/local/bin:' . $PATH
 
 :au FocusLost * :wa "Save on focus lost
@@ -121,6 +124,7 @@ set shiftwidth=2
 set expandtab
 
 let g:rspec_command = 'call Send_to_Tmux("bin/rspec {spec}\n")'
+let g:mocha_js_command = 'call Send_to_Tmux("mocha --opts spec/javascripts/mocha.opts {spec}\n")'
 let g:rspec_runner = "os_x_iterm"
 
 " Display extra whitespace
