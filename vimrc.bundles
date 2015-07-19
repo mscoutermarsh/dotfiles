@@ -15,7 +15,7 @@ Bundle 'blarghmatey/split-expander'
 Bundle 'rking/ag.vim'
 Bundle 'sjl/vitality.vim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'thoughtbot/vim-rspec'
+Bundle 'geekjuice/vim-spec'
 Bundle 'tpope/vim-bundler'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-airline'
@@ -33,7 +33,6 @@ Bundle "vim-ruby/vim-ruby"
 Bundle "elixir-lang/vim-elixir"
 Bundle "scrooloose/syntastic"
 Bundle "tpope/vim-haml"
-Bundle 'Lokaltog/vim-easymotion'
 Bundle "dkprice/vim-easygrep"
 Bundle "tpope/vim-rails"
 Bundle "altercation/vim-colors-solarized"
@@ -42,6 +41,9 @@ Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'henrik/vim-qargs'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'pangloss/vim-javascript'
 Bundle 'jsx/jsx.vim'
+Bundle 'terryma/vim-expand-region'
+
 
 filetype on
