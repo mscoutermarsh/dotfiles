@@ -1,7 +1,5 @@
 set shell=/bin/bash
 runtime macros/matchit.vim
-" use old regext engine. speed up ruby syntax highlighting
-set re=1
 
 set ttyfast
 set lazyredraw
