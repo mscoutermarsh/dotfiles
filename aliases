@@ -49,6 +49,7 @@ alias rc="bin/rails c"
 
 # Config Files
 alias vimrc="vim ~/.vimrc"
+alias vimrcbundles="vim ~/.vimrc.bundles"
 alias zshrc="vim ~/.zshrc"
 
 # Include custom aliases
