@@ -57,8 +57,8 @@ $ brew install macvim --override-system-vim
 ```
 This overwrites your default Vim installation. You should restart terminal after installing.
 
-**Prezto**  
-I use Prezto instead of Bash. Info & installation instructions here: https://github.com/sorin-ionescu/prezto
+**Oh-My-ZSH!**  
+I use Oh-My-ZSH instead of Bash. Info & installation instructions here: https://github.com/robbyrussell/oh-my-zsh
 
 **Tmux**  
 ```
