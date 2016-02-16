@@ -122,7 +122,7 @@ set shiftwidth=2
 set expandtab
 
 let g:rspec_command = 'call Send_to_Tmux("bin/rspec {spec}\n")'
-let g:mocha_js_command = 'call Send_to_Tmux("mocha --opts spec/javascripts/mocha.opts {spec}\n")'
+let g:mocha_js_command = 'call Send_to_Tmux("$(npm bin)/mocha --opts spec/javascripts/mocha.opts {spec}\n")'
 let g:rspec_runner = "os_x_iterm"
 
 " Display extra whitespace
@@ -255,3 +255,15 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Create related file (Rails Spec file if missing). :AC
+function! s:CreateRelated()
+  let related = rails#buffer().alternate_candidates()[0]
+  call s:Open(related)
+endfunction
+
+function! s:Open(file)
+  exec('vsplit ' . a:file)
+endfunction
+
+command! AC :call <SID>CreateRelated()
