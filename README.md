@@ -34,7 +34,7 @@ RCM creates dotfile symlinks (`.vimrc` -> `/dotfiles/vimrc`) from your home dire
 Plugins are listed in `vimrc.bundles`.
 
 To install them you'll need vundle. Installation directions are here: https://github.com/gmarik/Vundle.vim.
-Once vundle is installed. Open vim (`$ vim`) and type `:BundleInstall`. And then restart vim. You'll need to do this for all the plugins to work.
+Once vundle is installed. Open vim (`$ vim`) and type `:PluginInstall`. And then restart vim. You'll need to do this for all the plugins to work.
 
 ### Git Config
 Make sure you update ```gitconfig``` with your own name and email address. Otherwise you'll be committing as me. :smile_cat:
@@ -45,22 +45,22 @@ I use sourcecode pro. Once installed, go into iterm2 and Profiles > Text. Change
 
 ### Recommended
 
-**iterm2**  
+**iterm2**
 Use iterm2 instead of Terminal: http://iterm2.com/
 
 There are two themes available for iterm2 inside this repository. Both solarized dark and light (to match vim!) Take a look at the `iterm2` directory.
 
-**MacVim**  
+**MacVim**
 By default OSX has an older version of Vim installed. I recommend installing MacVim and running it from within iterm2. This can be done with brew.
 ```
 $ brew install macvim --override-system-vim
 ```
 This overwrites your default Vim installation. You should restart terminal after installing.
 
-**Oh-My-ZSH!**  
+**Oh-My-ZSH!**
 I use Oh-My-ZSH instead of Bash. Info & installation instructions here: https://github.com/robbyrussell/oh-my-zsh
 
-**Tmux**  
+**Tmux**
 ```
 $ brew install tmux
 $ brew install reattach-to-user-namespace
