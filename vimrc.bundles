@@ -1,52 +1,55 @@
-set nocompatible
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
 " Define bundles via Github repos
-Bundle 'tpope/vim-sensible'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-projectionist'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'blarghmatey/split-expander'
-Bundle 'rking/ag.vim'
-Bundle 'sjl/vitality.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'geekjuice/vim-spec'
-Bundle 'tpope/vim-bundler'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-surround'
-Bundle 'tmhedberg/matchit'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'vim-scripts/tComment'
-Bundle 'scrooloose/nerdtree'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "skwp/greplace.vim"
-Bundle "vim-ruby/vim-ruby"
-Bundle "elixir-lang/vim-elixir"
-Bundle "scrooloose/syntastic"
-Bundle "tpope/vim-haml"
-Bundle "dkprice/vim-easygrep"
-Bundle "tpope/vim-rails"
-Bundle "altercation/vim-colors-solarized"
-Bundle "myusuf3/numbers.vim"
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'jgdavey/tslime.vim'
-Bundle 'henrik/vim-qargs'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'pangloss/vim-javascript'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'jsx/jsx.vim'
-Bundle 'terryma/vim-expand-region'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-projectionist'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'blarghmatey/split-expander'
+Plugin 'ngmy/vim-rubocop'
+Plugin 'rking/ag.vim'
+Plugin 'sjl/vitality.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'geekjuice/vim-spec'
+Plugin 'tpope/vim-bundler'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-surround'
+Plugin 'tmhedberg/matchit'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'vim-scripts/tComment'
+Plugin 'scrooloose/nerdtree'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'skwp/greplace.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-haml'
+Plugin 'dkprice/vim-easygrep'
+Plugin 'tpope/vim-rails'
+Plugin 'frankier/neovim-colors-solarized-truecolor-only'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'jgdavey/tslime.vim'
+Plugin 'henrik/vim-qargs'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'jsx/jsx.vim'
+Plugin 'terryma/vim-expand-region'
 
 
 filetype on
+call vundle#end()
