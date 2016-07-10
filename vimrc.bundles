@@ -49,7 +49,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'jsx/jsx.vim'
 Plugin 'terryma/vim-expand-region'
+Plugin 'avdgaag/vim-phoenix'
 
 
-filetype on
-call vundle#end()
+call vundle#end()            " required
+filetype plugin indent on    " required

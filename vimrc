@@ -36,13 +36,10 @@ map <F10> :NERDTreeToggle<CR>
 " Current file in nerdtree
 map <F9> :NERDTreeFind<CR>
 
-" Reduce timeout after <ESC> is recvd. This is only a good idea on fast links.
+" Reduce timeout after <ESC> is recieved.
 set ttimeout
 set ttimeoutlen=20
 set notimeout
-
-" Edit another file in the same directory as the current file
-" uses expression to extract path from current file's path
 
 " highlight vertical column of cursor
 au WinLeave * set nocursorline nocursorcolumn
@@ -53,12 +50,6 @@ set cursorline
 map <F2> :set paste<CR>i
 " Leave paste mode on exit
 au InsertLeave * set nopaste
-
-" Command aliases
-cabbrev tp tabprev
-cabbrev tn tabnext
-cabbrev tf tabfirst
-cabbrev tl tablast
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nocompatible  " Use Vim settings, rather then Vi settings
@@ -121,7 +112,9 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-let g:rspec_command = 'call Send_to_Tmux("bin/rspec {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("NO_RENDERER=true bundle exec rspec {spec}\n")'
+" Mocha command is specific to Product Hunt setup. Probably doesn't work with
+" other apps
 let g:mocha_js_command = 'call Send_to_Tmux("$(npm bin)/mocha --opts spec/javascripts/mocha.opts {spec}\n")'
 let g:rspec_runner = "os_x_iterm"
 
@@ -152,22 +145,16 @@ set t_Co=256
 
 :set smartcase
 :set ignorecase
-:set noantialias
 
 " Color scheme
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set background=dark " or light
 colorscheme solarized
-set background=dark
-set encoding=utf-8
 
-" Highlight line number of where cursor currently is
-hi CursorLineNr guifg=#050505
 
 " Numbers
 set number
 set numberwidth=5
-
-" Snippets are activated by Shift+Tab
-let g:snippetsEmu_key = "<S-Tab>"
 
 " Persistent undo
 set undodir=~/.vim/undo/
@@ -180,9 +167,6 @@ set undoreload=10000
 :nnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
 :xnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
 :xnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
-
-" convert hash rockets
-nmap <leader>rh :%s/\v:(\w+) \=\>/\1:/g<cr>
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -202,10 +186,7 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
-" Switch between the last two files
-nnoremap <leader><leader> <c-^>
-
-" Get off my lawn
+" Get off my lawn - helpful when learning Vim :)
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
@@ -218,20 +199,22 @@ let g:html_indent_tags = 'li\|p'
 set splitbelow
 set splitright
 
-" Quicker window movement
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
+" Quicker window movement. Seemlessly navigate between Vim/Tmux panes
+let g:tmux_navigator_no_mappings = 1
+
+" This is a hack due to a neovim bug for going Left
+" Details: https://github.com/christoomey/vim-tmux-navigator#it-doesnt-work-in-neovim-specifically-c-h
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
+
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_enable_highlighting=0
-
-" Local config
-if filereadable($HOME . "/.vimrc.local")
-  source ~/.vimrc.local
-endif
 
 " Remove trailing whitespace on save for ruby files.
 function! s:RemoveTrailingWhitespaces()
@@ -249,12 +232,6 @@ au BufWritePre * :call <SID>RemoveTrailingWhitespaces()
 " cmd n, cmd p for fwd/backward in search
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
-
-" Easy navigation between splits. Instead of ctrl-w + j. Just ctrl-j
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 " Create related file (Rails Spec file if missing). :AC
 function! s:CreateRelated()
