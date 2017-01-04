@@ -1,3 +1,6 @@
+# use neovim!
+# alias vim='nvim'
+
 alias s="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt"
 alias sn="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt next"
 alias sp="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt prev"

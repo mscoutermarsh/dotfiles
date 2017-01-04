@@ -14,9 +14,8 @@
 -- Show how long each query takes to execute
 \timing
 
--- Use best available output format
-\x auto
-\set VERBOSITY verbose
+/* -- Use best available output format */
+/* \x auto */
 \set HISTFILE ~/.psql_history- :DBNAME
 \set HISTCONTROL ignoredups
 \set COMP_KEYWORD_CASE upper
