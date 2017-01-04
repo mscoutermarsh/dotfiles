@@ -28,6 +28,12 @@ $ brew tap thoughtbot/formulae
 $ brew install rcm
 ```
 
+Setup Vundle
+
+```
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
 Run rcm (this command expects that you cloned your dotfiles to `~/dotfiles/`)
 ```
 $ env RCRC=$HOME/dotfiles/rcrc rcup
