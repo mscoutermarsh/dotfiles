@@ -20,6 +20,7 @@ Plugin 'sjl/vitality.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'janko-m/vim-test'
 Plugin 'tpope/vim-bundler'
+Plugin 'ecomba/vim-ruby-refactoring'
 " Plugin 'airblade/vim-gitgutter'
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
@@ -49,6 +50,8 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'jsx/jsx.vim'
 Plugin 'terryma/vim-expand-region'
 Plugin 'avdgaag/vim-phoenix'
+Plugin 'vim-scripts/PatternsOnText'
+Plugin 'yegappan/mru'
 
 
 call vundle#end()            " required

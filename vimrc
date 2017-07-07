@@ -32,6 +32,8 @@ nmap <silent> <leader>l :TestLast<CR>
 
 let test#strategy = "tslime"
 
+let test#ruby#rspec#executable = 'NO_RENDERER=true bundle exec rspec'
+
 " Toggle nerdtree with F10
 map <F10> :NERDTreeToggle<CR>
 " Current file in nerdtree
