@@ -24,8 +24,8 @@
 [commit]
 	template = /Users/mike/.gitmessage
 [user]
-  name = Mike Coutermarsh
-  email = coutermarsh.mike@gmail.com
+  name = Daniel Chong
+  email = danielgq.chong@gmail.com
 [diff]
     tool = Kaleidoscope
 [difftool "Kaleidoscope"]
