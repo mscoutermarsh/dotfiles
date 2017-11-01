@@ -1,2 +1,2 @@
-tap thoughtbot/formulae
-install rcm
+tap "thoughtbot/formulae"
+brew "rcm"
