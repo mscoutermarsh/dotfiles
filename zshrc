@@ -88,6 +88,6 @@ source ~/.aliases
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 export NVM_DIR="/Users/mike/.nvm"
 [ -s "$NVM_DIR/nvm2.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

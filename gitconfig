@@ -22,7 +22,7 @@
 [include]
   path = .gitconfig.local
 [commit]
-	template = /Users/mike/.gitmessage
+	template = ~/.gitmessage
 [user]
   name = Mike Coutermarsh
   email = coutermarsh.mike@gmail.com
@@ -35,7 +35,7 @@
   trustExitCode = true
 [difftool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
@@ -51,3 +51,5 @@ protocol = https
 	helper = osxkeychain
 [url "https://github.com"]
 	insteadOf = git://github.com
+[github]
+	user = mscoutermarsh

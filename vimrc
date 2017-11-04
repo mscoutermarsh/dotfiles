@@ -30,10 +30,6 @@ nmap <silent> <leader>t :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 
-let test#strategy = "tslime"
-
-let test#ruby#rspec#executable = 'NO_RENDERER=true bundle exec rspec'
-
 " Toggle nerdtree with F10
 map <F10> :NERDTreeToggle<CR>
 " Current file in nerdtree
@@ -80,6 +76,72 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
+function! test#ruby#github#test_file(file) abort
+  return expand('%:p') =~# 'github/github/'
+endfunction
+
+function! test#ruby#github#build_position(type, position) abort
+  if a:type == 'nearest'
+    let test_name = s:nearest_test(a:position)
+    let matching_lines = s:matching_lines(test_name, a:position['file'])
+    let line_number = s:find_nearest_line_number(a:position['line'], matching_lines)
+
+    return [a:position['file'], '--name', "'/L".line_number."$/'"]
+  elseif a:type == 'file'
+    return [a:position['file']]
+  else
+    return []
+  endif
+endfunction
+
+function! test#ruby#github#build_args(args) abort
+  return [get(l:, 'path')] + a:args
+endfunction
+
+function! test#ruby#github#executable() abort
+  return 'script/testrb_or_zt'
+endfunction
+
+function! s:nearest_test(position) abort
+  let name = test#base#nearest_test(a:position, g:test#ruby#patterns)
+
+  if empty(name['test'])
+    let test = ''
+  else
+    let test = name['test'][0]
+  endif
+
+  return escape(test, '"')
+endfunction
+
+function! s:find_nearest_line_number(needle, haystack) abort
+  let closest_line_number = ''
+  let closest_distance = ''
+
+  for line_number in a:haystack
+    let distance = abs(line_number - a:needle)
+    if closest_line_number == ''
+      let closest_line_number = line_number
+      let closest_distance = distance
+    elseif distance < closest_distance
+      let closest_line_number = line_number
+      let closest_distance = distance
+    endif
+  endfor
+
+  return closest_line_number
+endfunction
+
+function! s:matching_lines(test_name, file) abort
+  let command = 'egrep -n "x?test.*'.a:test_name.'" '.a:file.' | cut -f1 -d:'
+  let results = system(command)[:-2]
+  return split(results, "\n")
+endfunction
+
+let test#strategy = "vimux"
+let test#runners = {'Ruby': ['GitHub']}
+" let test#ruby#rspec#executable = 'bundle exec rspec'
+
 filetype plugin indent on
 
 augroup vimrcEx
@@ -108,18 +170,12 @@ augroup vimrcEx
 augroup END
 
 " bind K to search word under cursor
-nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap K :Rg "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
 set expandtab
-
-let g:rspec_command = 'call Send_to_Tmux("NO_RENDERER=true bundle exec rspec {spec}\n")'
-" Mocha command is specific to Product Hunt setup. Probably doesn't work with
-" other apps
-let g:mocha_js_command = 'call Send_to_Tmux("$(npm bin)/mocha --opts spec/javascripts/mocha.opts {spec}\n")'
-let g:rspec_runner = "os_x_iterm"
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
@@ -135,6 +191,13 @@ if executable('ag')
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
+endif
+
+" Use ripgrep if available
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching = 1
 endif
 
 " Airline
