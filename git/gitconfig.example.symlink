@@ -1,0 +1,34 @@
+[user]
+  name = AUTHOR_NAME
+  email = AUTHOR_EMAIL
+  signingkey = GPG_SIGNING_KEY
+[github]
+  user = AUTHOR_HANDLE
+[credential]
+  helper = GIT_CREDENTIAL_HELPER
+[alias]
+  br = branch
+  p = add -p
+  co = checkout
+  ci = commit
+  coi = !git for-each-ref --sort=-committerdate --format='%(refname:short) (%(committerdate:relative))' refs/heads | fzf --reverse --nth=1 --preview 'git log --patch --color {1}...{1}~5' | awk '{print $1}' | xargs git checkout
+  st = status
+  staged = diff --staged
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = auto
+[core]
+  excludesfile = ~/.gitignore
+  editor = nvim
+[difftool]
+  prompt = false
+[mergetool]
+  prompt = false
+[push]
+  default = upstream
+[commit]
+  gpgsign = true
+[hub]
+  protocol = https

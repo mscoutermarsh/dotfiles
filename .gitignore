@@ -1,2 +1,6 @@
 !bin
 vim/bundle/
+.DS_Store
+git/gitconfig.symlink
+ruby/bundle.symlink/cache/
+vim/vim.symlink/plugged
