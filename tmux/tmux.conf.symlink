@@ -23,7 +23,9 @@ set -g clock-mode-style 12
 set -g renumber-windows on
 
 # use 256 colors
-set -g default-terminal "screen-256color"
+# set -g default-terminal 'tmux-256color-italic'
+set-option -ga terminal-overrides ",xterm-256color-italic:Tc"
+
 
 # change tmux bar colors
 set -g status-bg '#666666'
@@ -78,7 +80,6 @@ bind-key j command-prompt -p "join pane from: "  "join-pane -h -s '%%'"
 bind \ split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
 
-
 # Easy return to Vim from tmux runner zoom runner pane
 bind C-p run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim$' && tmux send-keys ':VtrZoomRunnerPane' 'C-m') || tmux send-keys 'C-c' && tmux select-pane -l"
 
@@ -91,13 +92,9 @@ setw -g automatic-rename off
 # The base index for windows and panes to 1 instead of the default 0.
 # # Now prefix 1 is the first window instead of a prefix 0 being the first.
 set -g base-index 1
-# setw -g pane-base-index 1 # not recognized by my tmux
 
 # Reload tmux.conf with prefix-r
 bind C-r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
-
-# Set the term environment variable when using tmux
-set -g default-terminal "screen-256color"
 
 # Provide access to the clipboard for pbpaste, pbcopy (details: http://goo.gl/DN82E)
 set-option -g default-command "reattach-to-user-namespace -l zsh -l"
@@ -124,4 +121,3 @@ bind -n C-Left resize-pane -L 10
 bind -n C-Right resize-pane -R 10
 bind -n C-Down resize-pane -D 5
 bind -n C-Up resize-pane -U 5
-set -g default-terminal "screen-256color"

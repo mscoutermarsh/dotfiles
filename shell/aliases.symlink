@@ -1,6 +1,3 @@
-# use neovim!
-# alias vim='nvim'
-
 alias s="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt"
 alias sn="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt next"
 alias sp="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt prev"
@@ -12,16 +9,14 @@ alias tlf="tail -f"
 alias ln='ln -v'
 alias mkdir='mkdir -p'
 alias ...='../..'
-alias l='ls'
-alias ll='ls -al'
-alias lh='ls -Alh'
 alias -g G='| grep'
 alias -g M='| less'
 alias -g ONE="| awk '{ print \$1}'"
 alias e="$EDITOR"
 alias v="$VISUAL"
 # because typing is hard
-alias bim="vim"
+alias bim="nvim"
+alias vim="nvim"
 
 # fix for passing params to rake tasks
 alias rake='noglob rake'
@@ -36,8 +31,6 @@ alias gs='git status -sb'
 alias gcb='git rev-parse --abbrev-ref HEAD | pbcopy'
 # because i make this typo a lot
 alias ggs='gs'
-# open a pull request, requires Hub to be installed (hub.github.com)
-alias gpr='git pull-request'
 
 # Bundler
 alias b="bundle"
@@ -57,6 +50,3 @@ alias rc="NO_RENDERER=true bin/rails c"
 alias vimrc="vim ~/.vimrc"
 alias vimrcbundles="vim ~/.vimrc.bundles"
 alias zshrc="vim ~/.zshrc"
-
-# Include custom aliases
-[[ -f ~/.aliases.local ]] && source ~/.aliases.local
