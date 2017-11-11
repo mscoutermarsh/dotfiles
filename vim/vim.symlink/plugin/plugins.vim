@@ -16,6 +16,7 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'vim-scripts/tComment'
 Plug 'jremmen/vim-ripgrep'
 Plug 'blarghmatey/split-expander'
+Plug 'farmergreg/vim-lastplace'
 
 " Tmux integration
 Plug 'benmills/vimux'
