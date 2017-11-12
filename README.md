@@ -17,7 +17,7 @@ If you have trouble during installation, please open an issue or pull request. :
 
 Clone this repo (or your own fork!) to your **home** directory (`/Users/username`).
 ```
-git clone https://github.com/bswinnerton/dotfiles ~/.dotfiles
+git clone https://github.com/mscoutermarsh/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 ./install
 ```
@@ -32,6 +32,11 @@ Use iterm2 instead of Terminal: http://iterm2.com/
 $ brew install tmux
 $ brew install reattach-to-user-namespace
 ```
+
+#### Thanks :heart:
+- [@bswinnerton's dotfiles](https://github.com/bswinnerton/dotfiles)
+- [@thoughtbot's dotfiles](https://github.com/thoughtbot/dotfiles)
+
 
 #### Contributing
 Did you have trouble installing this? Could I make the documentation better? Let me know [@mscccc](http://twitter.com/mscccc). Or please fork & create a pull request with your suggestions.
