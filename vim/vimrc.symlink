@@ -68,12 +68,16 @@ set background=dark
 " Showcase comments in italics
 highlight Comment cterm=italic gui=italic
 
-" Get off my lawn - helpful when learning Vim :)
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+" Easy tab navigation
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 
+" Get off my lawn - helpful when learning Vim :)
+" nnoremap <Left> :echoe "Use h"<CR>
+" nnoremap <Right> :echoe "Use l"<CR>
+" nnoremap <Up> :echoe "Use k"<CR>
+" nnoremap <Down> :echoe "Use j"<CR>
+"
 "-------------------------------------------------------------------------------
 " Neovim-specific configurations
 "-------------------------------------------------------------------------------

@@ -36,11 +36,12 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'groenewege/vim-less'
 Plug 'tpope/vim-haml'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'jparise/vim-graphql'
 Plug 'zerowidth/vim-copy-as-rtf'
 
 " Syntax errors
-Plug 'w0rp/ale'
+Plug 'vim-syntastic/syntastic'
 Plug 'ntpeters/vim-better-whitespace'
 
 " Markdown support
