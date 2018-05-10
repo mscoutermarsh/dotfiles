@@ -4,6 +4,9 @@ alias sp="osascript ~/.dotfiles/SpotifyControl/SpotifyControl prev"
 # Now playing: Cher - Believe
 alias sb="osascript ~/.dotfiles/SpotifyControl/SpotifyControl start spotify:track:2goLsvvODILDzeeiT4dAoR"
 
+# Safe delete
+alias rm="trash"
+
 # Unix
 alias tlf="tail -f"
 alias ln='ln -v'
