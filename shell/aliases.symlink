@@ -51,5 +51,5 @@ alias rc="NO_RENDERER=true bin/rails c"
 
 # Config Files
 alias vimrc="vim ~/.vimrc"
-alias vimrcbundles="vim ~/.vimrc.bundles"
+alias vimplugins="vim ~/.dotfiles/vim/vim.symlink/plugin/plugins.vim"
 alias zshrc="vim ~/.zshrc"
