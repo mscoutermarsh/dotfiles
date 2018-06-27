@@ -18,6 +18,8 @@ Plug 'vim-scripts/tComment'
 Plug 'jremmen/vim-ripgrep'
 Plug 'blarghmatey/split-expander'
 Plug 'farmergreg/vim-lastplace'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Tmux integration
 Plug 'benmills/vimux'
