@@ -13,7 +13,12 @@ map <Leader>w :update<CR>
 map <Leader>q :qall<CR>
 map <Leader>gs :Gstatus<CR>
 
+" CtrlP use FZF (faster!)
+nnoremap <C-p> :Files<Cr>
+
 syntax on
+autocmd Filetype scss if getfsize(@%) > 300 | setlocal syntax=OFF | endif
+
 
 set autoread                          " Auto reload changed files
 set wildmenu                          " Tab autocomplete in command mode
@@ -71,6 +76,12 @@ highlight Comment cterm=italic gui=italic
 " Easy tab navigation
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
+
+" Find/replace
+vnoremap <C-r> "hy:%s/<C-r>h//g<left><left><left>
+
+let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save_in_insert_mode = 0 " do not save in insert mode
 
 " Get off my lawn - helpful when learning Vim :)
 " nnoremap <Left> :echoe "Use h"<CR>

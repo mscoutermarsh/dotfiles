@@ -3,6 +3,8 @@ call plug#begin('~/.vim/plugged')
 " Addons
 Plug 'scrooloose/nerdtree'
 Plug 'yegappan/mru'
+Plug 'alvan/vim-closetag'
+Plug 'vim-scripts/vim-auto-save'
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-rhubarb'
@@ -27,7 +29,8 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " File system navigation
 Plug 'tpope/vim-eunuch'
-Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Syntax highlighting
 Plug 'vim-ruby/vim-ruby'
@@ -35,7 +38,6 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'elzr/vim-json'
 Plug 'tpope/vim-markdown'
-Plug 'kchmck/vim-coffee-script'
 Plug 'groenewege/vim-less'
 Plug 'tpope/vim-haml'
 Plug 'pangloss/vim-javascript'
@@ -59,9 +61,6 @@ Plug 'icymind/NeoSolarized'
 
 " Testing
 Plug 'janko-m/vim-test'
-
-" Display hex colors
-Plug 'chrisbra/Colorizer'
 
 " Gist
 Plug 'mattn/webapi-vim' | Plug 'mattn/gist-vim'
