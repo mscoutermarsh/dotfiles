@@ -63,6 +63,9 @@ plugins=(git history-substring-search vi-mode osx)
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -71,11 +74,11 @@ source ~/.aliases
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
