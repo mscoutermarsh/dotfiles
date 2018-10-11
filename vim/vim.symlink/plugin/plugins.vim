@@ -44,6 +44,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'jparise/vim-graphql'
 Plug 'zerowidth/vim-copy-as-rtf'
+Plug 'leafgarland/typescript-vim'
 
 " Syntax errors
 Plug 'vim-syntastic/syntastic'
