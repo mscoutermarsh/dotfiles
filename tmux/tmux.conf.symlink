@@ -90,10 +90,6 @@ bind C-j choose-tree
 # Keep window names as I set them
 setw -g automatic-rename off
 
-# The base index for windows and panes to 1 instead of the default 0.
-# # Now prefix 1 is the first window instead of a prefix 0 being the first.
-set -g base-index 1
-
 # Reload tmux.conf with prefix-r
 bind C-r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
 
