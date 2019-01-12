@@ -22,6 +22,7 @@ Plug 'blarghmatey/split-expander'
 Plug 'farmergreg/vim-lastplace'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'roman/golden-ratio'
 
 " Tmux integration
 Plug 'benmills/vimux'
