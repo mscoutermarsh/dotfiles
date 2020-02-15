@@ -1,4 +1,4 @@
-" 
+"
 " Vim settings for @mscoutermarsh
 "
 
@@ -12,6 +12,9 @@ map <Space> <leader>
 map <Leader>w :update<CR>
 map <Leader>q :qall<CR>
 map <Leader>gs :Gstatus<CR>
+
+" Recently edited files
+map <Leader>h :History<CR>
 
 " CtrlP use FZF (faster!)
 nnoremap <C-p> :Files<Cr>
@@ -41,6 +44,7 @@ set ignorecase smartcase              " Search queries intelligently set case
 set incsearch                         " Show search results as you type
 set timeoutlen=1000 ttimeoutlen=0     " Remove timeout when hitting escape
 set showcmd                           " Show size of visual selection
+
 
 " Persistent undo
 set undodir=~/.vim/undo/
@@ -73,15 +77,32 @@ set background=dark
 " Showcase comments in italics
 highlight Comment cterm=italic gui=italic
 
+" Open most recently used files on start
+" autocmd VimEnter * Mru .
+
 " Easy tab navigation
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 
+" Golang specific settings
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_auto_type_info = 1
+
+let g:go_fmt_command = "goimports"
+
+
 " Find/replace
 vnoremap <C-r> "hy:%s/<C-r>h//g<left><left><left>
 
-let g:auto_save = 1  " enable AutoSave on Vim startup
-let g:auto_save_in_insert_mode = 0 " do not save in insert mode
+" let g:auto_save = 1  " enable AutoSave on Vim startup
+" let g:auto_save_in_insert_mode = 0 " do not save in insert mode
 
 " Get off my lawn - helpful when learning Vim :)
 " nnoremap <Left> :echoe "Use h"<CR>

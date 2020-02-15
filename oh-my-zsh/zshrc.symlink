@@ -77,7 +77,8 @@ bindkey '^[[B' history-substring-search-down
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  # Neovim
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -92,7 +93,10 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 
 eval "$(rbenv init -)"
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin

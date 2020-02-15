@@ -24,6 +24,12 @@ cd ~/.dotfiles
 
 ### Recommended
 
+**neovim**
+I use Neovim instead of the default Vim.
+```
+brew install neovim
+```
+
 **iterm2**
 Use iterm2 instead of Terminal: http://iterm2.com/
 
