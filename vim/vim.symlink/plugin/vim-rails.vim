@@ -9,3 +9,16 @@ function! s:Open(file)
 endfunction
 
 command! AC :call <SID>CreateRelated()
+
+let g:rails_projections = {
+  \ "app/view_models/*.rb": {
+  \   "command": "viewmodel",
+  \   "template": ["class {camelcase|capitalize|colons} < ViewModel", "end"],
+  \   "test": ["test/view_models/{}_test.rb"]
+  \ },
+  \ "test/integration/*_controller_test.rb": {
+  \   "alternate": ["app/controllers/{}_controller.rb"]
+  \ },
+  \ "app/controllers/*_controller.rb": {
+  \   "test": ["test/integration/{}_controller_test.rb"]
+  \ } }
