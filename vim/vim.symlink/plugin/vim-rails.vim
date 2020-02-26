@@ -19,6 +19,12 @@ let g:rails_projections = {
   \ "test/integration/*_controller_test.rb": {
   \   "alternate": ["app/controllers/{}_controller.rb"]
   \ },
+  \ "test/integration/api/*_test.rb": {
+  \   "alternate": ["app/api/{}.rb"]
+  \ },
+  \ "app/api/*.rb": {
+  \   "alternate": ["test/integration/api/{}_test.rb"]
+  \ },
   \ "app/controllers/*_controller.rb": {
   \   "test": ["test/integration/{}_controller_test.rb"]
   \ } }
