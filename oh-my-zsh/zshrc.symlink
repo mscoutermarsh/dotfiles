@@ -100,3 +100,14 @@ eval "$(rbenv init -)"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# Increase file limit
+ulimit -n 2000
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+ export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval $(thefuck --alias)

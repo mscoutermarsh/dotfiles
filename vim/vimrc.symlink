@@ -22,6 +22,11 @@ nnoremap <C-p> :Files<Cr>
 syntax on
 autocmd Filetype scss if getfsize(@%) > 300 | setlocal syntax=OFF | endif
 
+augroup twig_ft
+  au!
+  autocmd BufNewFile,BufRead *.html.inky   set syntax=eruby
+augroup END
+
 
 set autoread                          " Auto reload changed files
 set wildmenu                          " Tab autocomplete in command mode

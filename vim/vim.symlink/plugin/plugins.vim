@@ -24,6 +24,11 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'roman/golden-ratio'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'sheerun/vim-polyglot'
+Plug 'M4R7iNP/vim-inky'
+
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 "
 " if has('nvim')
 "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -45,25 +50,22 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Syntax highlighting
-Plug 'vim-ruby/vim-ruby'
+" Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'elzr/vim-json'
 Plug 'tpope/vim-markdown'
-Plug 'groenewege/vim-less'
-Plug 'tpope/vim-haml'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'jparise/vim-graphql'
+" Plug 'groenewege/vim-less'
+" Plug 'tpope/vim-haml'
+" Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
+" Plug 'jparise/vim-graphql'
 Plug 'zerowidth/vim-copy-as-rtf'
 Plug 'leafgarland/typescript-vim'
 
 " Syntax errors
 Plug 'vim-syntastic/syntastic'
 Plug 'ntpeters/vim-better-whitespace'
-
-" Markdown support
-Plug 'junegunn/goyo.vim'
 
 " Git support
 Plug 'tpope/vim-fugitive'
