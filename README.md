@@ -15,9 +15,17 @@ If you're brand new to Vim, I recommend using [ThoughtBot's dotfiles](https://gi
 
 If you have trouble during installation, please open an issue or pull request. :star:
 
-Clone this repo (or your own fork!) to your **home** directory (`/Users/username`).
+1. Clone this repo (or your own fork!) to your **home** directory (`/Users/username`).
 ```
 git clone https://github.com/mscoutermarsh/dotfiles ~/.dotfiles
+```
+
+2. [Install homebrew](https://brew.sh) if you haven't yet (Mac Only)
+
+3. [Install npm](https://www.npmjs.com/get-npm) if you haven't yet.
+
+4. Run the setup
+```
 cd ~/.dotfiles
 ./install
 ```
