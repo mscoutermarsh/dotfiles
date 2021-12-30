@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Addons
+Plug 'github/copilot.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'yegappan/mru'
 Plug 'alvan/vim-closetag'
@@ -15,13 +16,11 @@ Plug 'tpope/vim-surround'
 Plug 'tmhedberg/matchit'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'ecomba/vim-ruby-refactoring'
 Plug 'vim-scripts/tComment'
 " Plug 'jremmen/vim-ripgrep'
 Plug 'blarghmatey/split-expander'
 Plug 'farmergreg/vim-lastplace'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'roman/golden-ratio'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sheerun/vim-polyglot'

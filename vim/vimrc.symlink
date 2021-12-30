@@ -17,7 +17,8 @@ map <Leader>gs :Gstatus<CR>
 map <Leader>h :History<CR>
 
 " CtrlP use FZF (faster!)
-nnoremap <C-p> :Files<Cr>
+nnoremap <C-p> :GFiles<Cr>
+let g:fzf_layout = { 'down': '40%' }
 
 syntax on
 autocmd Filetype scss if getfsize(@%) > 300 | setlocal syntax=OFF | endif
@@ -27,6 +28,7 @@ augroup twig_ft
   autocmd BufNewFile,BufRead *.html.inky   set syntax=eruby
 augroup END
 
+au BufRead,BufNewFile *.jb setfiletype ruby
 
 set autoread                          " Auto reload changed files
 set wildmenu                          " Tab autocomplete in command mode
@@ -42,7 +44,7 @@ set listchars=extends:→               " Show arrow if line continues rightward
 set listchars+=precedes:←             " Show arrow if line continues leftwards
 set nobackup nowritebackup noswapfile " Turn off backup files
 set noerrorbells novisualbell         " Turn off visual and audible bells
-set expandtab shiftwidth=2 tabstop=2  " Two spaces for tabs everywhere
+set shiftwidth=2 tabstop=2  " Two spaces for tabs everywhere
 set history=500
 set hlsearch                          " Highlight search results
 set ignorecase smartcase              " Search queries intelligently set case
