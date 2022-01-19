@@ -1,6 +1,6 @@
 ![dotfiles](https://raw.githubusercontent.com/mscoutermarsh/dotfiles/master/autobot.jpg)
 
-dotfiles
+dotfiles for MAC
 ===================
 ![screenshot](https://github.com/mscoutermarsh/dotfiles/blob/master/screenshot.png)
 (Here's what my setup looks like. Vim/Tmux)
@@ -12,6 +12,7 @@ dotfiles
 If you're brand new to Vim, I recommend using [ThoughtBot's dotfiles](https://github.com/thoughtbot/dotfiles). They are better maintained than mine :).  
 
 ## Installation
+**Warning:** Installation process described below works seamlessly for MAC only. In adition, when you run vim for the 1st time after installation, execute `:PlugInstall` to install all plugins requested.
 
 If you have trouble during installation, please open an issue or pull request. :star:
 
@@ -29,7 +30,6 @@ git clone https://github.com/mscoutermarsh/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 ./install
 ```
-
 ### Recommended
 
 **neovim**
@@ -54,3 +54,4 @@ $ brew install reattach-to-user-namespace
 
 #### Contributing
 Did you have trouble installing this? Could I make the documentation better? Let me know [@mscccc](http://twitter.com/mscccc). Or please fork & create a pull request with your suggestions.
+
